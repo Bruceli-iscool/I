@@ -7,8 +7,11 @@ class Lexer():
         self.lexer = LexerGenerator()
     
     def _add_tokens(self):
+        # statements
         # Print statement
         self.lexer.add('PRINT', r'print')
+        # input stream PlaceHolder until var defs
+        self.lexer.add('INPUT', r'input')
         # Parenthesis
         self.lexer.add('OPEN_PAR', r'\(')
         self.lexer.add('CLOSE_PAR', r'\)')
