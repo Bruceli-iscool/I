@@ -1,0 +1,13 @@
+4 + 2;
+// comment
+print("Hello, World!");
+// if statement syntax
+if (1==1) {
+    print(1 +1);
+}
+// variable syntax
+x = 5;
+// functions syntax
+def hi(args) {
+    return 0;
+}

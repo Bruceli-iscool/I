@@ -2,7 +2,7 @@ from rply import LexerGenerator
 
 
 class Lexer():
-    """Lexer for the L programming language"""
+    """Lexer for the I programming language"""
     def _init_(self):
         self.lexer = LexerGenerator()
     
@@ -21,5 +21,6 @@ class Lexer():
         self.lexer.add('DIV', r'\/')
         self.lexer.add('EXP', r'\^')
         # comments
-        self.lexer.add('COMMENTS', r'\//)
+        self.lexer.add('COMMENTS', r'\/\/')
+        # ignore whitespaces
         self.lexer.ignore('\s+')
