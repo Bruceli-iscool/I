@@ -14,6 +14,9 @@ class Lexer():
         self.lexer.add('CLOSE_PAR', r'\)')
         # semi-colon
         self.lexer.add('SEMI_COLON', r'\;')
+        # quotes
+        self.lexer.add('DOUBLE_QUOTES', r'\"')
+        self.lexer.add('SINGLE_QUOTES', r'\'')
         # Operations
         self.lexer.add('ADD', r'\+')
         self.lexer.add('SUB', r'\-')

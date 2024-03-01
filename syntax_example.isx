@@ -11,3 +11,5 @@ x = 5;
 def hi(args) {
     return 0;
 }
+// call function
+print(hi(hi));
