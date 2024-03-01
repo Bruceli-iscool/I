@@ -21,6 +21,5 @@ class Lexer():
         self.lexer.add('DIV', r'\/')
         self.lexer.add('EXP', r'\^')
         # comments
-        self.lexer.add('COMMENTS', r'\//')
-        self.lexer.ignore('//')
-        self.lexer.ignore(' ')
+        self.lexer.add('COMMENTS', r'\//)
+        self.lexer.ignore('\s+')
