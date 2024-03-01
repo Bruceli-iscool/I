@@ -14,3 +14,10 @@ class Lexer():
         self.lexer.add('CLOSE_PAR', r'\)')
         # semi-colon
         self.lexer.add('SEMI_COLON', r'\;')
+        # Operations
+        self.lexer.add('ADD', r'\+')
+        self.lexer.add('SUB', r'\-')
+        self.lexer.add('MUL', r'\*')
+        self.lexer.add('DIV', r'\/')
+        # comments
+        self.lexer.ignore('//')
