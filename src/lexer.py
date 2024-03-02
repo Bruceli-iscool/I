@@ -20,7 +20,7 @@ class Lexer():
         # Number
         self.lexer.add('NUMBER', r'\d+')
         # comments
-        self.lexer.add('COMMNETS', r'\/\/')
+        self.lexer.add('COMMENTS', r'\/\/')
         # Ignore spaces
         self.lexer.ignore('\s+')
 
