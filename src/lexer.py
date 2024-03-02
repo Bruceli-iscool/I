@@ -2,31 +2,28 @@ from rply import LexerGenerator
 
 
 class Lexer():
-    """Lexer for the I programming language"""
-    def _init_(self):
+    def __init__(self):
         self.lexer = LexerGenerator()
-    
+
     def _add_tokens(self):
-        # statements
-        # Print statement
+        # Print
         self.lexer.add('PRINT', r'print')
-        # input stream PlaceHolder until var defs
-        self.lexer.add('INPUT', r'input')
         # Parenthesis
-        self.lexer.add('OPEN_PAR', r'\(')
-        self.lexer.add('CLOSE_PAR', r'\)')
-        # semi-colon
+        self.lexer.add('OPEN_PAREN', r'\(')
+        self.lexer.add('CLOSE_PAREN', r'\)')
+        # Semi Colon
         self.lexer.add('SEMI_COLON', r'\;')
-        # quotes
-        self.lexer.add('DOUBLE_QUOTES', r'\"')
-        self.lexer.add('SINGLE_QUOTES', r'\'')
-        # Operations
-        self.lexer.add('ADD', r'\+')
+        # Operators
+        self.lexer.add('SUM', r'\+')
         self.lexer.add('SUB', r'\-')
         self.lexer.add('MUL', r'\*')
-        self.lexer.add('DIV', r'\/')
-        self.lexer.add('EXP', r'\^')
+        # Number
+        self.lexer.add('NUMBER', r'\d+')
         # comments
-        self.lexer.add('COMMENTS', r'\/\/')
-        # ignore whitespaces
+        self.lexer.add('COMMNETS', r'\/\/')
+        # Ignore spaces
         self.lexer.ignore('\s+')
+
+    def get_lexer(self):
+        self._add_tokens()
+        return self.lexer.build()

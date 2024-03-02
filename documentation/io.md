@@ -1,0 +1,2 @@
+Basics in the L programming language:
+L is a high-level compiled programming language made by Bruce Li. The language is designed to look like the compiled version of Python combined with JavaScript. The language file extensions are .i and .isx.
